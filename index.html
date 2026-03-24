@@ -54,21 +54,25 @@
   <h3>a. Personal Information</h3>
   <ul>
     <li>
-      Name, email address, and phone number: Collected during registration, seller verification,
-      and when creating or offering a service. Required to associate a service with a real person
-      and enable communication.
-    </li>
-    <li>
-      PAN number and PAN card image: Used for legal and financial identity verification.
-    </li>
-    <li>
-      Bank account number, IFSC code, and bank proof image: Collected for identity verification
-      and regulatory compliance.
-    </li>
-    <li>
-      Optional GSTIN: May be collected if provided voluntarily by influencers.
+      Name, email address, and phone number: Collected during registration,
+      onboarding, and when creating or offering a service. Required to associate
+      a service with a real person and enable communication.
     </li>
   </ul>
+
+  <p>
+    We do <strong>not collect or store sensitive financial or identity documents</strong>, including:
+  </p>
+  <ul>
+    <li>PAN number or PAN card</li>
+    <li>Bank account details (account number, IFSC, etc.)</li>
+    <li>Bank proof documents</li>
+  </ul>
+
+  <p>
+    All such information, including <strong>KYC and financial verification</strong>, is handled
+    directly by Razorpay when users connect their accounts via Razorpay Connect.
+  </p>
 
   <h3>b. Technical Information</h3>
   <ul>
@@ -93,7 +97,6 @@
   <ul>
     <li>Provide access to our platform, storefront features, and service listings</li>
     <li>Facilitate secure transactions through user-connected payment gateways</li>
-    <li>Verify seller identity</li>
     <li>Enable order and service-related push notifications through FCM</li>
     <li>Detect and prevent fraud or abuse</li>
     <li>Improve user experience and performance of our app</li>
@@ -128,13 +131,11 @@
   <h2>5. Payments and Data Processing</h2>
   <ul>
     <li>Payments on justlinkit are securely processed through Razorpay.</li>
-    <li>Users connect and manage their own Razorpay accounts on the platform.</li>
-    <li>We do not store credit card, debit card, or bank credentials.</li>
+    <li>Users connect and manage their own Razorpay accounts via Razorpay Connect.</li>
+    <li>We do not collect, store, or process bank account details, PAN information, or financial documents.</li>
+    <li>All KYC, compliance, and verification requirements are handled entirely by Razorpay.</li>
+    <li>We only receive limited information such as Razorpay account ID or status.</li>
     <li>All transactions are encrypted and PCI-DSS compliant.</li>
-    <li>
-      By default, all payouts are made directly to the payment gateway account
-      connected and owned by the user.
-    </li>
   </ul>
 
   <h2>6. Data Storage and Security</h2>
@@ -144,8 +145,8 @@
     </li>
     <li>Communication between your app and our servers is always via HTTPS.</li>
     <li>
-      Uploaded documents (e.g., PAN card, bank proof) are retained securely to comply with
-      Indian regulatory laws.
+      We do not store sensitive financial or identity verification documents on our servers.
+      All such data is securely handled by Razorpay.
     </li>
   </ul>
 
@@ -153,7 +154,7 @@
   <p>We do not sell, rent, or trade your personal data.</p>
   <p>Your data may be shared only with:</p>
   <ul>
-    <li>Razorpay, for secure payment processing</li>
+    <li>Razorpay, for payment processing, KYC, and compliance</li>
     <li>Supabase, for database management and authentication</li>
     <li>Regulatory authorities, if required by Indian law</li>
   </ul>
@@ -179,15 +180,11 @@
   <h2>10. App Permissions and Runtime Requests</h2>
   <p>
     The app requests <strong>storage or media access permission</strong>
-    (READ_EXTERNAL_STORAGE or READ_MEDIA_IMAGES) only at runtime and only if you
-    attempt to upload a file (e.g., using the in-app file chooser).
-    This permission is not requested automatically on app startup.
+    only at runtime and only if you attempt to upload a file.
   </p>
   <p>
-    On Android 13 and higher, <strong>notification permission</strong> is also explicitly
-    requested at runtime. This is used only to deliver service-related push notifications
-    such as order updates and announcements via Firebase Cloud Messaging (FCM),
-    and you may choose to deny or disable it at any time in your device settings.
+    Notification permission is requested at runtime to deliver service-related updates via FCM.
+    You can disable it anytime in device settings.
   </p>
 
   <h2>11. Changes to This Policy</h2>
@@ -204,4 +201,3 @@
 
 </body>
 </html>
-
